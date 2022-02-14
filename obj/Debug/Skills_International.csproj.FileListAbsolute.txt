@@ -10,3 +10,4 @@ C:\Users\Sanuja Methmal\source\repos\Skills_International\obj\Debug\Skills_Inter
 C:\Users\Sanuja Methmal\source\repos\Skills_International\obj\Debug\Skills_International.pdb
 C:\Users\Sanuja Methmal\source\repos\Skills_International\obj\Debug\Skills_International.Login.resources
 C:\Users\Sanuja Methmal\source\repos\Skills_International\obj\Debug\Skills_International.Register.resources
+C:\Users\Sanuja Methmal\source\repos\Skills_International\obj\Debug\Skills_International.Dashboard.resources

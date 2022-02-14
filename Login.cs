@@ -42,5 +42,10 @@ namespace Skills_International
         {
 
         }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
     }
 }

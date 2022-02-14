@@ -165,6 +165,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Login";
             this.Text = "Login - Skills International";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);

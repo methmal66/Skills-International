@@ -35,9 +35,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.loginBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.username = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -68,9 +68,9 @@
             // 
             this.groupBox1.Controls.Add(this.loginBtn);
             this.groupBox1.Controls.Add(this.clearBtn);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.password);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.username);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(29, 219);
@@ -89,6 +89,7 @@
             this.loginBtn.TabIndex = 5;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // clearBtn
             // 
@@ -98,13 +99,15 @@
             this.clearBtn.TabIndex = 4;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
-            // textBox2
+            // password
             // 
-            this.textBox2.Location = new System.Drawing.Point(113, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(130, 26);
-            this.textBox2.TabIndex = 3;
+            this.password.Location = new System.Drawing.Point(113, 62);
+            this.password.Name = "password";
+            this.password.PasswordChar = '*';
+            this.password.Size = new System.Drawing.Size(130, 26);
+            this.password.TabIndex = 3;
             // 
             // label2
             // 
@@ -116,12 +119,12 @@
             this.label2.Text = "Password";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // username
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 26);
-            this.textBox1.TabIndex = 1;
+            this.username.Location = new System.Drawing.Point(113, 30);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(130, 26);
+            this.username.TabIndex = 1;
             // 
             // label1
             // 
@@ -180,9 +183,9 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.Button loginBtn;

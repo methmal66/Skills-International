@@ -17,6 +17,12 @@ namespace Skills_International
             InitializeComponent();
         }
 
+        private void clearForm()
+        {
+            username.Clear();
+            password.Clear();
+        }
+
         private void Login_Load(object sender, EventArgs e)
         {
 
@@ -46,6 +52,35 @@ namespace Skills_International
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
             
+        }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            user
+                .setUserName(username.Text)
+                .setPassword(password.Text);
+
+            if (user.login())
+            {
+                Register register = new Register();
+                register.Show();
+                this.Hide();
+                return;
+            }
+
+            string message = "Invalid Login credentials, please check Username and Password and try again";
+            string caption = "Invalid login Details";
+            DialogResult result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (result == DialogResult.OK)
+                clearForm();
+       
+            
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            clearForm();
         }
     }
 }

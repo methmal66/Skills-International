@@ -16,7 +16,11 @@ namespace Skills_International
 
         private void clearForm()
         {
-            regNoBox.ResetText();
+            regNoBox.Items.Clear();
+            SqlDataReader reader = Student.findAllRegNo();
+            while (reader.Read())
+                regNoBox.Items.Add(reader.GetInt32(0).ToString());
+
             firstNameBox.Clear();
             lastNameBox.Clear();
             dateOfBirthBox.Value = DateTime.Now;
@@ -31,28 +35,32 @@ namespace Skills_International
             contactNoBox.Clear();
         }
 
+        private Student getFieldValues(Student s)
+        {
+            s.regNo = int.Parse(regNoBox.Text);
+            s.firstName = firstNameBox.Text;
+            s.lastName = lastNameBox.Text;
+            s.dateOfBirth = dateOfBirthBox.Value;
+            s.gender = maleBtn.Checked ? "Male" : femaleBtn.Checked ? "Female" : "Not provided";
+            s.address = addressBox.Text;
+            s.email = emailBox.Text;
+            s.mobilePhone = mobilePhoneBox.Text;
+            s.homePhone = homePhoneBox.Text;
+            s.parentName = parentNameBox.Text;
+            s.nic = nicBox.Text;
+            s.contactNo = contactNoBox.Text;
+            return s;
+        }
+
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            Student student = new Student();
-            student.regNo = int.Parse(regNoBox.Text);
-            student.firstName = firstNameBox.Text;
-            student.lastName = lastNameBox.Text;
-            student.dateOfBirth = dateOfBirthBox.Value;
-            student.gender = maleBtn.Checked ? "Male" : femaleBtn.Checked ? "Female" : "Not provided";
-            student.address = addressBox.Text;
-            student.email = emailBox.Text;
-            student.mobilePhone = mobilePhoneBox.Text;
-            student.homePhone = homePhoneBox.Text;
-            student.parentName = parentNameBox.Text;
-            student.nic = nicBox.Text;
-            student.contactNo = contactNoBox.Text;
-
+            Student student = getFieldValues(new Student());
             string caption = "Register Student";
-            string message;
             MessageBoxIcon icon;
+
             if (student.register())
             {
-                message = "Record Added Successfully";
+                string message = "Record Added Successfully";
                 icon = MessageBoxIcon.Information;
                 DialogResult result = MessageBox.Show(message, caption, MessageBoxButtons.OK, icon);
                 if (result == DialogResult.OK)
@@ -60,7 +68,7 @@ namespace Skills_International
             }
             else
             {
-                message = "Failed to add record";
+                string message = "Failed to add record";
                 icon = MessageBoxIcon.Error;
                 MessageBox.Show(message, caption, MessageBoxButtons.OK, icon);
                 
@@ -70,6 +78,77 @@ namespace Skills_International
         private void clearBtn_Click(object sender, EventArgs e)
         {
             clearForm();
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            Student student = getFieldValues(new Student());
+            string message = "Are you sure, Do you really want to Delete this Record...?";
+            string caption = "Delete Student";
+            DialogResult result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(result == DialogResult.Yes)
+            {
+                if (student.delete())
+                {
+                    message = "Record Deleted Successfully";
+                    result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (result == DialogResult.OK)
+                        clearForm();
+                    return;
+                }
+
+                message = "Failed to delete the record";
+                MessageBox.Show(message,caption,MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            message = "Record was not deleted";
+            MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            Student student = getFieldValues(new Student());
+            string caption = "Update Student";
+            string message;
+
+            if (student.update())
+            {
+                message = "Record Updated Successfully";
+                DialogResult result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if(result == DialogResult.OK)
+                    clearForm();
+                return;
+            }
+
+            message = "Failed to update record";
+            MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+           
+
+        }
+
+        private void exitBtn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string caption = "Exit";
+            string message = "Are you sure, Do you really want to Exit...?";
+            DialogResult result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+                Application.Exit();
+        }
+
+        private void logoutBtn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string caption = "Logot";
+            string message = "Are you sure, Do you really want to Logout...?";
+            DialogResult result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.Show();
+            }
         }
     }
 }

@@ -40,5 +40,14 @@ namespace Skills_International
         {
             clearForm();
         }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            string caption = "Exit";
+            string message = "Are you sure, Do you really want to Exit...?";
+            DialogResult result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                Application.Exit();
+        }
     }
 }

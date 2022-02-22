@@ -30,6 +30,7 @@
         {
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.regNoBox = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.contactNoBox = new System.Windows.Forms.TextBox();
@@ -62,9 +63,8 @@
             this.updateBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.regNoBox = new System.Windows.Forms.ComboBox();
+            this.logoutBtn = new System.Windows.Forms.LinkLabel();
+            this.exitBtn = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -96,6 +96,14 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Registration";
+            // 
+            // regNoBox
+            // 
+            this.regNoBox.FormattingEnabled = true;
+            this.regNoBox.Location = new System.Drawing.Point(147, 25);
+            this.regNoBox.Name = "regNoBox";
+            this.regNoBox.Size = new System.Drawing.Size(266, 27);
+            this.regNoBox.TabIndex = 6;
             // 
             // groupBox4
             // 
@@ -377,6 +385,7 @@
             this.updateBtn.TabIndex = 7;
             this.updateBtn.Text = "Update";
             this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // deleteBtn
             // 
@@ -386,6 +395,7 @@
             this.deleteBtn.TabIndex = 8;
             this.deleteBtn.Text = "Delete";
             this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // clearBtn
             // 
@@ -397,43 +407,37 @@
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
-            // linkLabel1
+            // logoutBtn
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(7, 16);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(52, 19);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Logout";
+            this.logoutBtn.AutoSize = true;
+            this.logoutBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.Location = new System.Drawing.Point(7, 16);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(52, 19);
+            this.logoutBtn.TabIndex = 10;
+            this.logoutBtn.TabStop = true;
+            this.logoutBtn.Text = "Logout";
+            this.logoutBtn.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logoutBtn_LinkClicked);
             // 
-            // linkLabel2
+            // exitBtn
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(381, 709);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(32, 19);
-            this.linkLabel2.TabIndex = 11;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Exit";
-            // 
-            // regNoBox
-            // 
-            this.regNoBox.FormattingEnabled = true;
-            this.regNoBox.Location = new System.Drawing.Point(147, 25);
-            this.regNoBox.Name = "regNoBox";
-            this.regNoBox.Size = new System.Drawing.Size(266, 27);
-            this.regNoBox.TabIndex = 6;
+            this.exitBtn.AutoSize = true;
+            this.exitBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.Location = new System.Drawing.Point(381, 709);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(32, 19);
+            this.exitBtn.TabIndex = 11;
+            this.exitBtn.TabStop = true;
+            this.exitBtn.Text = "Exit";
+            this.exitBtn.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.exitBtn_LinkClicked);
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 735);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.exitBtn);
+            this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.updateBtn);
@@ -491,8 +495,8 @@
         private System.Windows.Forms.DateTimePicker dateOfBirthBox;
         private System.Windows.Forms.TextBox lastNameBox;
         private System.Windows.Forms.TextBox firstNameBox;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel logoutBtn;
+        private System.Windows.Forms.LinkLabel exitBtn;
         private System.Windows.Forms.ComboBox regNoBox;
     }
 }

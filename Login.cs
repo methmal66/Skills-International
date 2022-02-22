@@ -74,8 +74,6 @@ namespace Skills_International
             DialogResult result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
             if (result == DialogResult.OK)
                 clearForm();
-       
-            
         }
 
         private void clearBtn_Click(object sender, EventArgs e)

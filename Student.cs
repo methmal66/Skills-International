@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 
 namespace Skills_International
 {
@@ -49,6 +50,14 @@ namespace Skills_International
             bool status = db.execute(sql);
             db.close();
             return status;
+        }
+
+        public static SqlDataReader findAllRegNo()
+        {
+            DB dB = new DB();
+            string sql = "SELECT regNo from Registration";
+            SqlDataReader reader = dB.query(sql);
+            return reader;
         }
     }
 }

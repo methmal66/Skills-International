@@ -8,88 +8,88 @@ namespace Skills_International
 {
     internal class Student
     {
-        int regNo;
-        string firstName;
-        string lastName;
-        DateTime dateOfBirth;
-        string gender;
-        string address;
-        string email;
-        string mobilePhone;
-        string homePhone;
-        string parentName;
-        string nic;
-        string contactNo;
+        int _regNo;
+        string _firstName;
+        string _lastName;
+        DateTime _dateOfBirth;
+        string _gender;
+        string _address;
+        string _email;
+        string _mobilePhone;
+        string _homePhone;
+        string _parentName;
+        string _nic;
+        string _contactNo;
 
-        public Student setRegNo(int x)
+        public Student regNo(int x)
         {
-            regNo = x;
+            _regNo = x;
             return this;
         }
 
         public Student setFirstName(string x)
         {
-            firstName = x;
+            _firstName = x;
             return this;
         }
 
-        public Student setLastName(string x)
+        public Student lastName(string x)
         {
-            lastName = x;
+            _lastName = x;
             return this;
         }
 
-        public Student setDateOfBirth(DateTime x)
+        public Student dateOfBirth(DateTime x)
         {
-            dateOfBirth = x;
+            _dateOfBirth = x;
             return this;
         }
 
-        public Student setGender(string x)
+        public Student gender(string x)
         {
-            gender = x;
+            _gender = x;
             return this;
         }
 
-        public Student setAddress(string x)
+        public Student address(string x)
         {
-            address = x;
+            _address = x;
             return this;
         }
 
-        public Student setEmail(string x)
+        public Student email(string x)
         {
-            email = x;
+            _email = x;
             return this;
         }
 
-        public Student setMobilePhone(string x)
+        public Student mobilePhone(string x)
         {
-            mobilePhone = x;
+            _mobilePhone = x;
             return this;
         }
 
-        public Student setHomePhone(string x)
+        public Student homePhone(string x)
         {
-            homePhone = x;
+            _homePhone = x;
             return this;
         }
 
-        public Student setParentName(string x)
+        public Student parentName(string x)
         {
-            parentName = x;
+            _parentName = x;
             return this;
         }
 
-        public Student setNic(string x)
+        public Student nic(string x)
         {
-            nic = x;
+            _nic = x;
             return this;
         }
 
-        public Student setContactNo(string x)
+        public Student contactNo(string x)
         {
-            contactNo = x;
+            _contactNo = x;
             return this;
         }
 
@@ -97,8 +97,8 @@ namespace Skills_International
         {
             DB db = new DB();
             string sql = "INSERT INTO Registration VALUES(" +
-                "" + regNo + ", '"+firstName+"', '"+lastName+"', '"+dateOfBirth+"', '"+gender+"', " +
-                "'"+address+"', '"+email+"', '"+mobilePhone+"', '"+homePhone+"', '"+parentName+"', '"+nic+"', '"+contactNo+"'" +
+                "" + _regNo + ", '"+_firstName+"', '"+_lastName+"', '"+_dateOfBirth+"', '"+_gender+"', " +
+                "'"+_address+"', '"+_email+"', '"+_mobilePhone+"', '"+_homePhone+"', '"+_parentName+"', '"+_nic+"', '"+_contactNo+"'" +
                 ")";
             bool status = db.execute(sql);
             db.close();
@@ -109,10 +109,10 @@ namespace Skills_International
         {
             DB db = new DB();
             string sql = "UPDATE Registration SET " +
-                "firstName='" + firstName + "', lastName='" + lastName + "', dateOfBirth='" + dateOfBirth + "'," +
-                " gender='" + gender + "', address='" + address + "', email='" + email + "', mobilePhone='" + mobilePhone + "'," +
-                " homePhone='" + homePhone + "', parentName='" + parentName + "', nic='" + nic + "', contactNo='" + contactNo + "'" +
-                " WHERE regNo ="+regNo;
+                "firstName='" + _firstName + "', lastName='" + _lastName + "', dateOfBirth='" + _dateOfBirth + "'," +
+                " gender='" + _gender + "', address='" + _address + "', email='" + _email + "', mobilePhone='" + _mobilePhone + "'," +
+                " homePhone='" + _homePhone + "', parentName='" + _parentName + "', nic='" + _nic + "', contactNo='" + _contactNo + "'" +
+                " WHERE regNo ="+_regNo;
             bool status = db.execute(sql);
             db.close();
             return status;
@@ -121,7 +121,7 @@ namespace Skills_International
         public bool delete()
         {
             DB db = new DB();
-            string sql = "DELETE FROM Registration WHERE regNo=" + regNo;
+            string sql = "DELETE FROM Registration WHERE regNo=" + _regNo;
             bool status = db.execute(sql);
             db.close();
             return status;

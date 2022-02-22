@@ -58,8 +58,8 @@ namespace Skills_International
         {
             User user = new User();
             user
-                .setUserName(username.Text)
-                .setPassword(password.Text);
+                .userName(username.Text)
+                .password(password.Text);
 
             if (user.login())
             {

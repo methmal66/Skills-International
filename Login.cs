@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Skills_International
@@ -22,38 +15,6 @@ namespace Skills_International
             username.Clear();
             password.Clear();
         }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-           
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Login_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
-        }
-
         private void loginBtn_Click(object sender, EventArgs e)
         {
             User user = new User();

@@ -7,7 +7,7 @@ namespace Skills_International
         public int regNo;
         public string firstName;
         public string lastName;
-        public string dateOfBirth;
+        public DateTime dateOfBirth;
         public string gender;
         public string address;
         public string email;

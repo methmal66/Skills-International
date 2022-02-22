@@ -32,31 +32,30 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.contactnoBox = new System.Windows.Forms.TextBox();
+            this.contactNoBox = new System.Windows.Forms.TextBox();
             this.nicBox = new System.Windows.Forms.TextBox();
-            this.parentnameBox = new System.Windows.Forms.TextBox();
+            this.parentNameBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.emailBox = new System.Windows.Forms.TextBox();
-            this.homeBox = new System.Windows.Forms.TextBox();
+            this.homePhoneBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.mobileBox = new System.Windows.Forms.TextBox();
+            this.mobilePhoneBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.addressBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.femaleBtn = new System.Windows.Forms.RadioButton();
             this.maleBtn = new System.Windows.Forms.RadioButton();
-            this.dobBox = new System.Windows.Forms.DateTimePicker();
-            this.lastnameBox = new System.Windows.Forms.TextBox();
-            this.firstnameBox = new System.Windows.Forms.TextBox();
+            this.dateOfBirthBox = new System.Windows.Forms.DateTimePicker();
+            this.lastNameBox = new System.Windows.Forms.TextBox();
+            this.firstNameBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.registerBtn = new System.Windows.Forms.Button();
@@ -65,6 +64,7 @@
             this.clearBtn = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.regNoBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -83,10 +83,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.regNoBox);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,9 +100,9 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.contactnoBox);
+            this.groupBox4.Controls.Add(this.contactNoBox);
             this.groupBox4.Controls.Add(this.nicBox);
-            this.groupBox4.Controls.Add(this.parentnameBox);
+            this.groupBox4.Controls.Add(this.parentNameBox);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Location = new System.Drawing.Point(7, 480);
@@ -121,12 +121,12 @@
             this.label14.TabIndex = 6;
             this.label14.Text = "Contact No";
             // 
-            // contactnoBox
+            // contactNoBox
             // 
-            this.contactnoBox.Location = new System.Drawing.Point(140, 110);
-            this.contactnoBox.Name = "contactnoBox";
-            this.contactnoBox.Size = new System.Drawing.Size(266, 26);
-            this.contactnoBox.TabIndex = 4;
+            this.contactNoBox.Location = new System.Drawing.Point(140, 110);
+            this.contactNoBox.Name = "contactNoBox";
+            this.contactNoBox.Size = new System.Drawing.Size(266, 26);
+            this.contactNoBox.TabIndex = 4;
             // 
             // nicBox
             // 
@@ -135,12 +135,12 @@
             this.nicBox.Size = new System.Drawing.Size(265, 26);
             this.nicBox.TabIndex = 3;
             // 
-            // parentnameBox
+            // parentNameBox
             // 
-            this.parentnameBox.Location = new System.Drawing.Point(140, 34);
-            this.parentnameBox.Name = "parentnameBox";
-            this.parentnameBox.Size = new System.Drawing.Size(266, 26);
-            this.parentnameBox.TabIndex = 2;
+            this.parentNameBox.Location = new System.Drawing.Point(140, 34);
+            this.parentNameBox.Name = "parentNameBox";
+            this.parentNameBox.Size = new System.Drawing.Size(266, 26);
+            this.parentNameBox.TabIndex = 2;
             // 
             // label13
             // 
@@ -163,10 +163,10 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.emailBox);
-            this.groupBox3.Controls.Add(this.homeBox);
+            this.groupBox3.Controls.Add(this.homePhoneBox);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.mobileBox);
+            this.groupBox3.Controls.Add(this.mobilePhoneBox);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.addressBox);
             this.groupBox3.Controls.Add(this.label8);
@@ -184,12 +184,12 @@
             this.emailBox.Size = new System.Drawing.Size(265, 26);
             this.emailBox.TabIndex = 10;
             // 
-            // homeBox
+            // homePhoneBox
             // 
-            this.homeBox.Location = new System.Drawing.Point(140, 206);
-            this.homeBox.Name = "homeBox";
-            this.homeBox.Size = new System.Drawing.Size(266, 26);
-            this.homeBox.TabIndex = 9;
+            this.homePhoneBox.Location = new System.Drawing.Point(140, 206);
+            this.homePhoneBox.Name = "homePhoneBox";
+            this.homePhoneBox.Size = new System.Drawing.Size(266, 26);
+            this.homePhoneBox.TabIndex = 9;
             // 
             // label9
             // 
@@ -210,12 +210,12 @@
             this.label12.TabIndex = 7;
             this.label12.Text = "Home Phone";
             // 
-            // mobileBox
+            // mobilePhoneBox
             // 
-            this.mobileBox.Location = new System.Drawing.Point(140, 171);
-            this.mobileBox.Name = "mobileBox";
-            this.mobileBox.Size = new System.Drawing.Size(266, 26);
-            this.mobileBox.TabIndex = 8;
+            this.mobilePhoneBox.Location = new System.Drawing.Point(140, 171);
+            this.mobilePhoneBox.Name = "mobilePhoneBox";
+            this.mobilePhoneBox.Size = new System.Drawing.Size(266, 26);
+            this.mobilePhoneBox.TabIndex = 8;
             // 
             // label10
             // 
@@ -249,9 +249,9 @@
             // 
             this.groupBox2.Controls.Add(this.femaleBtn);
             this.groupBox2.Controls.Add(this.maleBtn);
-            this.groupBox2.Controls.Add(this.dobBox);
-            this.groupBox2.Controls.Add(this.lastnameBox);
-            this.groupBox2.Controls.Add(this.firstnameBox);
+            this.groupBox2.Controls.Add(this.dateOfBirthBox);
+            this.groupBox2.Controls.Add(this.lastNameBox);
+            this.groupBox2.Controls.Add(this.firstNameBox);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
@@ -285,26 +285,26 @@
             this.maleBtn.Text = "Male";
             this.maleBtn.UseVisualStyleBackColor = true;
             // 
-            // dobBox
+            // dateOfBirthBox
             // 
-            this.dobBox.Location = new System.Drawing.Point(138, 101);
-            this.dobBox.Name = "dobBox";
-            this.dobBox.Size = new System.Drawing.Size(265, 26);
-            this.dobBox.TabIndex = 6;
+            this.dateOfBirthBox.Location = new System.Drawing.Point(138, 101);
+            this.dateOfBirthBox.Name = "dateOfBirthBox";
+            this.dateOfBirthBox.Size = new System.Drawing.Size(265, 26);
+            this.dateOfBirthBox.TabIndex = 6;
             // 
-            // lastnameBox
+            // lastNameBox
             // 
-            this.lastnameBox.Location = new System.Drawing.Point(138, 62);
-            this.lastnameBox.Name = "lastnameBox";
-            this.lastnameBox.Size = new System.Drawing.Size(265, 26);
-            this.lastnameBox.TabIndex = 5;
+            this.lastNameBox.Location = new System.Drawing.Point(138, 62);
+            this.lastNameBox.Name = "lastNameBox";
+            this.lastNameBox.Size = new System.Drawing.Size(265, 26);
+            this.lastNameBox.TabIndex = 5;
             // 
-            // firstnameBox
+            // firstNameBox
             // 
-            this.firstnameBox.Location = new System.Drawing.Point(138, 23);
-            this.firstnameBox.Name = "firstnameBox";
-            this.firstnameBox.Size = new System.Drawing.Size(264, 26);
-            this.firstnameBox.TabIndex = 4;
+            this.firstNameBox.Location = new System.Drawing.Point(138, 23);
+            this.firstNameBox.Name = "firstNameBox";
+            this.firstNameBox.Size = new System.Drawing.Size(264, 26);
+            this.firstNameBox.TabIndex = 4;
             // 
             // label7
             // 
@@ -342,14 +342,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "First Name";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(147, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(265, 27);
-            this.comboBox1.TabIndex = 2;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -375,6 +367,7 @@
             this.registerBtn.TabIndex = 6;
             this.registerBtn.Text = "Register";
             this.registerBtn.UseVisualStyleBackColor = true;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // updateBtn
             // 
@@ -402,6 +395,7 @@
             this.clearBtn.TabIndex = 9;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // linkLabel1
             // 
@@ -424,6 +418,13 @@
             this.linkLabel2.TabIndex = 11;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Exit";
+            // 
+            // regNoBox
+            // 
+            this.regNoBox.Location = new System.Drawing.Point(147, 26);
+            this.regNoBox.Name = "regNoBox";
+            this.regNoBox.Size = new System.Drawing.Size(265, 26);
+            this.regNoBox.TabIndex = 6;
             // 
             // Register
             // 
@@ -458,7 +459,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
@@ -471,8 +471,8 @@
         private System.Windows.Forms.TextBox addressBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox mobileBox;
-        private System.Windows.Forms.TextBox homeBox;
+        private System.Windows.Forms.TextBox mobilePhoneBox;
+        private System.Windows.Forms.TextBox homePhoneBox;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
@@ -481,16 +481,17 @@
         private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button clearBtn;
-        private System.Windows.Forms.TextBox contactnoBox;
+        private System.Windows.Forms.TextBox contactNoBox;
         private System.Windows.Forms.TextBox nicBox;
-        private System.Windows.Forms.TextBox parentnameBox;
+        private System.Windows.Forms.TextBox parentNameBox;
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.RadioButton femaleBtn;
         private System.Windows.Forms.RadioButton maleBtn;
-        private System.Windows.Forms.DateTimePicker dobBox;
-        private System.Windows.Forms.TextBox lastnameBox;
-        private System.Windows.Forms.TextBox firstnameBox;
+        private System.Windows.Forms.DateTimePicker dateOfBirthBox;
+        private System.Windows.Forms.TextBox lastNameBox;
+        private System.Windows.Forms.TextBox firstNameBox;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.TextBox regNoBox;
     }
 }

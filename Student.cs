@@ -93,18 +93,19 @@ namespace Skills_International
             return this;
         }
 
-        public void register()
+        public bool register()
         {
             DB db = new DB();
             string sql = "INSERT INTO Registration VALUES(" +
                 "" + regNo + ", '"+firstName+"', '"+lastName+"', '"+dateOfBirth+"', '"+gender+"', " +
                 "'"+address+"', '"+email+"', '"+mobilePhone+"', '"+homePhone+"', '"+parentName+"', '"+nic+"', '"+contactNo+"'" +
                 ")";
-            db.execute(sql);
+            bool status = db.execute(sql);
             db.close();
+            return status;
         }
 
-        public void update()
+        public bool update()
         {
             DB db = new DB();
             string sql = "UPDATE Registration SET " +
@@ -112,16 +113,18 @@ namespace Skills_International
                 " gender='" + gender + "', address='" + address + "', email='" + email + "', mobilePhone='" + mobilePhone + "'," +
                 " homePhone='" + homePhone + "', parentName='" + parentName + "', nic='" + nic + "', contactNo='" + contactNo + "'" +
                 " WHERE regNo ="+regNo;
-            db.execute(sql);
+            bool status = db.execute(sql);
             db.close();
+            return status;
         }
 
-        public void delete()
+        public bool delete()
         {
             DB db = new DB();
             string sql = "DELETE FROM Registration WHERE regNo=" + regNo;
-            db.execute(sql);
+            bool status = db.execute(sql);
             db.close();
+            return status;
         }
     }
 }

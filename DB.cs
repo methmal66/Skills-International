@@ -23,11 +23,13 @@ namespace Skills_International
             con.Close();
         }
 
-        public void execute(string sql)
+        public bool execute(string sql)
         {
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.ExecuteNonQuery();
+            if (cmd.ExecuteNonQuery() == 1)
+                return true;
+            return false;
         }
 
         public SqlDataReader query(string sql)

@@ -64,7 +64,7 @@
             this.clearBtn = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.regNoBox = new System.Windows.Forms.TextBox();
+            this.regNoBox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -421,9 +421,10 @@
             // 
             // regNoBox
             // 
-            this.regNoBox.Location = new System.Drawing.Point(147, 26);
+            this.regNoBox.FormattingEnabled = true;
+            this.regNoBox.Location = new System.Drawing.Point(147, 25);
             this.regNoBox.Name = "regNoBox";
-            this.regNoBox.Size = new System.Drawing.Size(265, 26);
+            this.regNoBox.Size = new System.Drawing.Size(266, 27);
             this.regNoBox.TabIndex = 6;
             // 
             // Register
@@ -492,6 +493,6 @@
         private System.Windows.Forms.TextBox firstNameBox;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.TextBox regNoBox;
+        private System.Windows.Forms.ComboBox regNoBox;
     }
 }

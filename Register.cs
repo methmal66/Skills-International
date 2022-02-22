@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Skills_International
@@ -8,11 +9,14 @@ namespace Skills_International
         public Register()
         {
             InitializeComponent();
+            SqlDataReader reader = Student.findAllRegNo();
+            while (reader.Read())
+                regNoBox.Items.Add(reader.GetInt32(0).ToString());
         }
 
         private void clearForm()
         {
-            regNoBox.Clear();
+            regNoBox.ResetText();
             firstNameBox.Clear();
             lastNameBox.Clear();
             dateOfBirthBox.Value = DateTime.Now;

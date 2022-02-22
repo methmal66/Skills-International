@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Skills_International
@@ -17,30 +10,44 @@ namespace Skills_International
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void clearForm()
         {
+            usernameBox.Clear();
+            passwordBox.Clear();
+        }
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            user.username = usernameBox.Text;
+            user.password = passwordBox.Text;
 
+            if (user.login())
+            {
+                Register register = new Register();
+                register.Show();
+                this.Hide();
+                return;
+            }
+
+            string message = "Invalid Login credentials, please check Username and Password and try again";
+            string caption = "Invalid login Details";
+            DialogResult result = MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (result == DialogResult.OK)
+                clearForm();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void clearBtn_Click(object sender, EventArgs e)
         {
-
+            clearForm();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-           
+        private void exitBtn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            string caption = "Exit";
+            string message = "Are you sure, Do you really want to Exit...?";
+            DialogResult result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                Application.Exit();
         }
     }
 }

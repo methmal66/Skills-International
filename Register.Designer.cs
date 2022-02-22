@@ -30,45 +30,45 @@
         {
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.regNoBox = new System.Windows.Forms.ComboBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.contactNoBox = new System.Windows.Forms.TextBox();
+            this.nicBox = new System.Windows.Forms.TextBox();
+            this.parentNameBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.emailBox = new System.Windows.Forms.TextBox();
+            this.homePhoneBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.mobilePhoneBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.addressBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.femaleBtn = new System.Windows.Forms.RadioButton();
+            this.maleBtn = new System.Windows.Forms.RadioButton();
+            this.dateOfBirthBox = new System.Windows.Forms.DateTimePicker();
+            this.lastNameBox = new System.Windows.Forms.TextBox();
+            this.firstNameBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.mobileBox = new System.Windows.Forms.TextBox();
-            this.homeBox = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.registerBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.firstnameBox = new System.Windows.Forms.TextBox();
-            this.lastnameBox = new System.Windows.Forms.TextBox();
-            this.dobBox = new System.Windows.Forms.DateTimePicker();
-            this.maleBtn = new System.Windows.Forms.RadioButton();
-            this.femaleBtn = new System.Windows.Forms.RadioButton();
-            this.emailBox = new System.Windows.Forms.TextBox();
-            this.parentnameBox = new System.Windows.Forms.TextBox();
-            this.nicBox = new System.Windows.Forms.TextBox();
-            this.contactnoBox = new System.Windows.Forms.TextBox();
+            this.logoutBtn = new System.Windows.Forms.LinkLabel();
+            this.exitBtn = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -80,14 +80,13 @@
             this.label3.Size = new System.Drawing.Size(265, 37);
             this.label3.TabIndex = 4;
             this.label3.Text = "Skills International";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.regNoBox);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -97,15 +96,85 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Registration";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // regNoBox
+            // 
+            this.regNoBox.FormattingEnabled = true;
+            this.regNoBox.Location = new System.Drawing.Point(147, 25);
+            this.regNoBox.Name = "regNoBox";
+            this.regNoBox.Size = new System.Drawing.Size(266, 27);
+            this.regNoBox.TabIndex = 6;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.contactNoBox);
+            this.groupBox4.Controls.Add(this.nicBox);
+            this.groupBox4.Controls.Add(this.parentNameBox);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Location = new System.Drawing.Point(7, 480);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(406, 142);
+            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Parent Details";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(30, 113);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(81, 19);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Contact No";
+            // 
+            // contactNoBox
+            // 
+            this.contactNoBox.Location = new System.Drawing.Point(140, 110);
+            this.contactNoBox.Name = "contactNoBox";
+            this.contactNoBox.Size = new System.Drawing.Size(266, 26);
+            this.contactNoBox.TabIndex = 4;
+            // 
+            // nicBox
+            // 
+            this.nicBox.Location = new System.Drawing.Point(140, 73);
+            this.nicBox.Name = "nicBox";
+            this.nicBox.Size = new System.Drawing.Size(265, 26);
+            this.nicBox.TabIndex = 3;
+            // 
+            // parentNameBox
+            // 
+            this.parentNameBox.Location = new System.Drawing.Point(140, 34);
+            this.parentNameBox.Name = "parentNameBox";
+            this.parentNameBox.Size = new System.Drawing.Size(266, 26);
+            this.parentNameBox.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(30, 76);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(37, 19);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "NIC";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(30, 36);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(89, 19);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Parent Name";
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.emailBox);
-            this.groupBox3.Controls.Add(this.homeBox);
+            this.groupBox3.Controls.Add(this.homePhoneBox);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.mobileBox);
+            this.groupBox3.Controls.Add(this.mobilePhoneBox);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.addressBox);
             this.groupBox3.Controls.Add(this.label8);
@@ -115,7 +184,20 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Contact Details";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // emailBox
+            // 
+            this.emailBox.Location = new System.Drawing.Point(141, 133);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(265, 26);
+            this.emailBox.TabIndex = 10;
+            // 
+            // homePhoneBox
+            // 
+            this.homePhoneBox.Location = new System.Drawing.Point(140, 206);
+            this.homePhoneBox.Name = "homePhoneBox";
+            this.homePhoneBox.Size = new System.Drawing.Size(266, 26);
+            this.homePhoneBox.TabIndex = 9;
             // 
             // label9
             // 
@@ -125,6 +207,33 @@
             this.label9.Size = new System.Drawing.Size(42, 19);
             this.label9.TabIndex = 2;
             this.label9.Text = "Email";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(26, 207);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 19);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Home Phone";
+            // 
+            // mobilePhoneBox
+            // 
+            this.mobilePhoneBox.Location = new System.Drawing.Point(140, 171);
+            this.mobilePhoneBox.Name = "mobilePhoneBox";
+            this.mobilePhoneBox.Size = new System.Drawing.Size(266, 26);
+            this.mobilePhoneBox.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(25, 171);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 19);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Mobile Phone";
             // 
             // addressBox
             // 
@@ -148,9 +257,9 @@
             // 
             this.groupBox2.Controls.Add(this.femaleBtn);
             this.groupBox2.Controls.Add(this.maleBtn);
-            this.groupBox2.Controls.Add(this.dobBox);
-            this.groupBox2.Controls.Add(this.lastnameBox);
-            this.groupBox2.Controls.Add(this.firstnameBox);
+            this.groupBox2.Controls.Add(this.dateOfBirthBox);
+            this.groupBox2.Controls.Add(this.lastNameBox);
+            this.groupBox2.Controls.Add(this.firstNameBox);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
@@ -161,7 +270,49 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Basic Details";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // femaleBtn
+            // 
+            this.femaleBtn.AutoSize = true;
+            this.femaleBtn.Location = new System.Drawing.Point(296, 133);
+            this.femaleBtn.Name = "femaleBtn";
+            this.femaleBtn.Size = new System.Drawing.Size(71, 23);
+            this.femaleBtn.TabIndex = 8;
+            this.femaleBtn.TabStop = true;
+            this.femaleBtn.Text = "Female";
+            this.femaleBtn.UseVisualStyleBackColor = true;
+            // 
+            // maleBtn
+            // 
+            this.maleBtn.AutoSize = true;
+            this.maleBtn.Location = new System.Drawing.Point(178, 133);
+            this.maleBtn.Name = "maleBtn";
+            this.maleBtn.Size = new System.Drawing.Size(58, 23);
+            this.maleBtn.TabIndex = 7;
+            this.maleBtn.TabStop = true;
+            this.maleBtn.Text = "Male";
+            this.maleBtn.UseVisualStyleBackColor = true;
+            // 
+            // dateOfBirthBox
+            // 
+            this.dateOfBirthBox.Location = new System.Drawing.Point(138, 101);
+            this.dateOfBirthBox.Name = "dateOfBirthBox";
+            this.dateOfBirthBox.Size = new System.Drawing.Size(265, 26);
+            this.dateOfBirthBox.TabIndex = 6;
+            // 
+            // lastNameBox
+            // 
+            this.lastNameBox.Location = new System.Drawing.Point(138, 62);
+            this.lastNameBox.Name = "lastNameBox";
+            this.lastNameBox.Size = new System.Drawing.Size(265, 26);
+            this.lastNameBox.TabIndex = 5;
+            // 
+            // firstNameBox
+            // 
+            this.firstNameBox.Location = new System.Drawing.Point(138, 23);
+            this.firstNameBox.Name = "firstNameBox";
+            this.firstNameBox.Size = new System.Drawing.Size(264, 26);
+            this.firstNameBox.TabIndex = 4;
             // 
             // label7
             // 
@@ -199,14 +350,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "First Name";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(147, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(265, 27);
-            this.comboBox1.TabIndex = 2;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -224,85 +367,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Reg No";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(25, 171);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 19);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Mobile Phone";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(26, 207);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 19);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Home Phone";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // mobileBox
-            // 
-            this.mobileBox.Location = new System.Drawing.Point(140, 171);
-            this.mobileBox.Name = "mobileBox";
-            this.mobileBox.Size = new System.Drawing.Size(266, 26);
-            this.mobileBox.TabIndex = 8;
-            // 
-            // homeBox
-            // 
-            this.homeBox.Location = new System.Drawing.Point(140, 206);
-            this.homeBox.Name = "homeBox";
-            this.homeBox.Size = new System.Drawing.Size(266, 26);
-            this.homeBox.TabIndex = 9;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.contactnoBox);
-            this.groupBox4.Controls.Add(this.nicBox);
-            this.groupBox4.Controls.Add(this.parentnameBox);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Location = new System.Drawing.Point(7, 480);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(406, 142);
-            this.groupBox4.TabIndex = 5;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Parent Details";
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(30, 36);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(89, 19);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Parent Name";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(30, 76);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(37, 19);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "NIC";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(30, 113);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(81, 19);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "Contact No";
-            // 
             // registerBtn
             // 
             this.registerBtn.Location = new System.Drawing.Point(10, 683);
@@ -311,6 +375,7 @@
             this.registerBtn.TabIndex = 6;
             this.registerBtn.Text = "Register";
             this.registerBtn.UseVisualStyleBackColor = true;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // updateBtn
             // 
@@ -320,6 +385,7 @@
             this.updateBtn.TabIndex = 7;
             this.updateBtn.Text = "Update";
             this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // deleteBtn
             // 
@@ -329,6 +395,7 @@
             this.deleteBtn.TabIndex = 8;
             this.deleteBtn.Text = "Delete";
             this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // clearBtn
             // 
@@ -338,107 +405,39 @@
             this.clearBtn.TabIndex = 9;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
-            // linkLabel1
+            // logoutBtn
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(7, 16);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(52, 19);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Logout";
+            this.logoutBtn.AutoSize = true;
+            this.logoutBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.Location = new System.Drawing.Point(7, 16);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(52, 19);
+            this.logoutBtn.TabIndex = 10;
+            this.logoutBtn.TabStop = true;
+            this.logoutBtn.Text = "Logout";
+            this.logoutBtn.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logoutBtn_LinkClicked);
             // 
-            // linkLabel2
+            // exitBtn
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(381, 709);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(32, 19);
-            this.linkLabel2.TabIndex = 11;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Exit";
-            // 
-            // firstnameBox
-            // 
-            this.firstnameBox.Location = new System.Drawing.Point(138, 23);
-            this.firstnameBox.Name = "firstnameBox";
-            this.firstnameBox.Size = new System.Drawing.Size(264, 26);
-            this.firstnameBox.TabIndex = 4;
-            // 
-            // lastnameBox
-            // 
-            this.lastnameBox.Location = new System.Drawing.Point(138, 62);
-            this.lastnameBox.Name = "lastnameBox";
-            this.lastnameBox.Size = new System.Drawing.Size(265, 26);
-            this.lastnameBox.TabIndex = 5;
-            // 
-            // dobBox
-            // 
-            this.dobBox.Location = new System.Drawing.Point(138, 101);
-            this.dobBox.Name = "dobBox";
-            this.dobBox.Size = new System.Drawing.Size(265, 26);
-            this.dobBox.TabIndex = 6;
-            // 
-            // maleBtn
-            // 
-            this.maleBtn.AutoSize = true;
-            this.maleBtn.Location = new System.Drawing.Point(178, 133);
-            this.maleBtn.Name = "maleBtn";
-            this.maleBtn.Size = new System.Drawing.Size(58, 23);
-            this.maleBtn.TabIndex = 7;
-            this.maleBtn.TabStop = true;
-            this.maleBtn.Text = "Male";
-            this.maleBtn.UseVisualStyleBackColor = true;
-            // 
-            // femaleBtn
-            // 
-            this.femaleBtn.AutoSize = true;
-            this.femaleBtn.Location = new System.Drawing.Point(296, 133);
-            this.femaleBtn.Name = "femaleBtn";
-            this.femaleBtn.Size = new System.Drawing.Size(71, 23);
-            this.femaleBtn.TabIndex = 8;
-            this.femaleBtn.TabStop = true;
-            this.femaleBtn.Text = "Female";
-            this.femaleBtn.UseVisualStyleBackColor = true;
-            // 
-            // emailBox
-            // 
-            this.emailBox.Location = new System.Drawing.Point(141, 133);
-            this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(265, 26);
-            this.emailBox.TabIndex = 10;
-            // 
-            // parentnameBox
-            // 
-            this.parentnameBox.Location = new System.Drawing.Point(140, 34);
-            this.parentnameBox.Name = "parentnameBox";
-            this.parentnameBox.Size = new System.Drawing.Size(266, 26);
-            this.parentnameBox.TabIndex = 2;
-            // 
-            // nicBox
-            // 
-            this.nicBox.Location = new System.Drawing.Point(140, 73);
-            this.nicBox.Name = "nicBox";
-            this.nicBox.Size = new System.Drawing.Size(265, 26);
-            this.nicBox.TabIndex = 3;
-            // 
-            // contactnoBox
-            // 
-            this.contactnoBox.Location = new System.Drawing.Point(140, 110);
-            this.contactnoBox.Name = "contactnoBox";
-            this.contactnoBox.Size = new System.Drawing.Size(266, 26);
-            this.contactnoBox.TabIndex = 4;
+            this.exitBtn.AutoSize = true;
+            this.exitBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.Location = new System.Drawing.Point(381, 709);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(32, 19);
+            this.exitBtn.TabIndex = 11;
+            this.exitBtn.TabStop = true;
+            this.exitBtn.Text = "Exit";
+            this.exitBtn.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.exitBtn_LinkClicked);
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 735);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.exitBtn);
+            this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.updateBtn);
@@ -449,12 +448,12 @@
             this.Text = "Register - Skills International";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,7 +464,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
@@ -478,8 +476,8 @@
         private System.Windows.Forms.TextBox addressBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox mobileBox;
-        private System.Windows.Forms.TextBox homeBox;
+        private System.Windows.Forms.TextBox mobilePhoneBox;
+        private System.Windows.Forms.TextBox homePhoneBox;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
@@ -488,16 +486,17 @@
         private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button clearBtn;
-        private System.Windows.Forms.TextBox contactnoBox;
+        private System.Windows.Forms.TextBox contactNoBox;
         private System.Windows.Forms.TextBox nicBox;
-        private System.Windows.Forms.TextBox parentnameBox;
+        private System.Windows.Forms.TextBox parentNameBox;
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.RadioButton femaleBtn;
         private System.Windows.Forms.RadioButton maleBtn;
-        private System.Windows.Forms.DateTimePicker dobBox;
-        private System.Windows.Forms.TextBox lastnameBox;
-        private System.Windows.Forms.TextBox firstnameBox;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.DateTimePicker dateOfBirthBox;
+        private System.Windows.Forms.TextBox lastNameBox;
+        private System.Windows.Forms.TextBox firstNameBox;
+        private System.Windows.Forms.LinkLabel logoutBtn;
+        private System.Windows.Forms.LinkLabel exitBtn;
+        private System.Windows.Forms.ComboBox regNoBox;
     }
 }

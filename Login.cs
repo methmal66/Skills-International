@@ -12,15 +12,14 @@ namespace Skills_International
 
         private void clearForm()
         {
-            username.Clear();
-            password.Clear();
+            usernameBox.Clear();
+            passwordBox.Clear();
         }
         private void loginBtn_Click(object sender, EventArgs e)
         {
             User user = new User();
-            user
-                .userName(username.Text)
-                .password(password.Text);
+            user.username = usernameBox.Text;
+            user.password = passwordBox.Text;
 
             if (user.login())
             {

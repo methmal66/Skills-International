@@ -7,29 +7,18 @@ namespace Skills_International
 {
     internal class User
     {
-        string _username;
-        string _password;
+        public string username;
+        public string password;
 
-        public User userName(string x)
-        {
-            _username = x;
-            return this;
-        }
-
-        public User password(string x)
-        {
-            _password = x;
-            return this;
-        }
         public bool login()
         {
             DB db = new DB();
-            string sql = "SELECT * FROM Users WHERE username='" + _username + "'";
+            string sql = "SELECT * FROM Users WHERE username='" + username + "'";
             SqlDataReader reader = db.query(sql);
             if (reader.Read())
             {
                 SHA1 sha1Hash = SHA1.Create();
-                byte[] sourceBytes = Encoding.UTF8.GetBytes(_password);
+                byte[] sourceBytes = Encoding.UTF8.GetBytes(password);
                 byte[] hashBytes = sha1Hash.ComputeHash(sourceBytes);
                 string hash = BitConverter.ToString(hashBytes).Replace("-",String.Empty);
                 if(hash == (string)reader["password"])
